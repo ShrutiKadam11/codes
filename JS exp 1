@@ -1,0 +1,59 @@
+HTML
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Area Calculator</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h2>Area of Triangle</h2>
+  <label>Base:</label>
+  <input type="number" id="base"><br><br>
+  <label>Height:</label>
+  <input type="number" id="height"><br><br>
+  <button onclick="findTriangleArea()">Calculate Area</button>
+  <p id="triangleArea"></p>
+
+  <br>
+
+  <h2>Area of Rectangle</h2>
+  <label>Length:</label>
+  <input type="number" id="length"><br><br>
+  <label>Breadth:</label>
+  <input type="number" id="breadth"><br><br>
+  <button onclick="findRectangleArea()">Calculate Area</button>
+  <p id="rectangleArea"></p>
+
+  <br>
+
+  <h2>Area of Circle</h2>
+  <label>Radius:</label>
+  <input type="number" id="radius"><br><br>
+  <button onclick="findCircleArea()">Calculate Area</button>
+  <p id="circleArea"></p>
+</body>
+</html>
+
+
+JS
+
+function removeArrayElement() {
+  let arr = document.getElementById("arrayInput").value.split(",");
+  let element = document.getElementById("elementToRemove").value.trim();
+
+  let index = arr.indexOf(element);
+
+  if (index !== -1) {
+    arr.splice(index, 1); // removes element
+    document.getElementById("result").innerHTML = "Updated Array: " + arr.join(", ");
+  } else {
+    document.getElementById("result").innerHTML = "Element Not Found!";
+  }
+
+  console.log(arr);
+  alert(arr);
+}
+
